@@ -1,0 +1,161 @@
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 50px; /* Margem padrão adicionada aqui */
+}
+
+/* Container principal */
+.container {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Boxes */
+.box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Cabeçalho */
+header {
+    margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 20px;
+}
+
+/* Restante do CSS permanece igual */
+.chart-and-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .chart-and-stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.chart-container {
+    width: 200px;
+    height: 200px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.stat-box {
+    width: 130px;
+    height: 130px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stat-box.green {
+    background-color: #28a745;
+}
+
+.stat-box.red {
+    background-color: #dc3545;
+}
+
+.test-list {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    max-height: 550px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.history-item {
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.clickable-item {
+    cursor: pointer;
+}
+
+.clickable-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.green-grid .history-item {
+    background-color: #28a745;
+}
+
+.red-grid .history-item {
+    background-color: #dc3545;
+}
+
+.history-item p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.no-click {
+    cursor: default;
+}
+
+.modal-body pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal-body .badge {
+    font-size: 0.9em;
+    padding: 0.5em 0.75em;
+}

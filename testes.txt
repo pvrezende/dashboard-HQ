@@ -1,0 +1,16 @@
+1|Teste 1|REPROVADO|17/03/2025|17:00:00|Falha na conexão|Setor A 
+2|Teste 2|APROVADO|11/03/2025|14:00:00|Todas verificações OK|Setor B
+3|Teste 3|REPROVADO|18/03/2025|13:15:00|Temperatura elevada|Setor C
+4|Teste 4|APROVADO|20/03/2025|14:01:00|Dentro dos parâmetros|Setor A
+5|Teste 5|REPROVADO|02/03/2025|13:00:00|Pressão irregular|Setor B
+6|Teste 6|APROVADO|18/03/2025|15:00:00|Teste completo|Setor C
+7|Teste 7|REPROVADO|01/03/2025|13:16:00|Vazamento detectado|Setor A
+8|Teste 8|APROVADO|23/03/2025|15:01:00|Aprovado com sucesso|Setor B
+9|Teste 9|REPROVADO|17/03/2025|17:00:00|Falha no sensor|Setor C
+10|Teste 10|APROVADO|17/03/2025|17:00:00|Performance excelente|Setor A
+11|Teste 11|REPROVADO|01/03/2025|13:16:00|Tempo excedido|Setor B
+12|Teste 12|APROVADO|22/03/2025|15:00:00|Aprovado|Setor C
+13|Teste 13|REPROVADO|01/03/2025|13:15:00|Conexão instável|Setor A
+14|Teste 14|APROVADO|21/03/2025|15:01:00|Teste concluído|Setor B
+15|Teste 15|REPROVADO|01/03/2025|13:00:00|Falha geral|Setor C
+16|Teste 16|APROVADO|18/03/2025|14:01:00|Todos critérios atendidos|Setor A
