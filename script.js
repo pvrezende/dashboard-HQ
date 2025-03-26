@@ -1,6 +1,48 @@
 // Variáveis globais
 let pieChart;
 let todosTestes = [];
+// Função para logout
+function logout() {
+    sessionStorage.removeItem('authenticated');
+    window.location.href = 'login.html';
+}
+
+// Função para mostrar detalhes do teste
+function mostrarDetalhesTeste(testId) {
+    const teste = todosTestes.find(t => t.id === testId);
+    if (!teste) return;
+
+    const modalBody = document.getElementById('detalhesTesteBody');
+    modalBody.innerHTML = `
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>ID:</strong> ${teste.id}</p>
+                <p><strong>Nome:</strong> ${teste.nome}</p>
+                <p><strong>Resultado:</strong> <span class="badge bg-${teste.resultado === 'APROVADO' ? 'success' : 'danger'}">${teste.resultado}</span></p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>Data:</strong> ${teste.data}</p>
+                <p><strong>Hora:</strong> ${teste.hora}</p>
+                <p><strong>Setor:</strong> ${teste.setor || 'N/A'}</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <h6>Detalhes:</h6>
+                <p>${teste.detalhes || 'Não há informações adicionais'}</p>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12">
+                <h6>Informações Completas:</h6>
+                <pre class="bg-light p-3">${JSON.stringify(teste, null, 2)}</pre>
+            </div>
+        </div>
+    `;
+
+    const modal = new bootstrap.Modal(document.getElementById('detalhesTesteModal'));
+    modal.show();
+}
 
 // Função para mostrar detalhes do teste
 function mostrarDetalhesTeste(testId) {
