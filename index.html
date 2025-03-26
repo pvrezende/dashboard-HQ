@@ -9,9 +9,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script>
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+
     <!-- Barra Superior -->
-    <header class="text-center mt-4 p-3 bg-primary text-white">
+    <header class="text-center mt-4 p-3 bg-primary text-white position-relative">
         ACOMPANHAMENTO DE PRODUÇÃO - | <strong>HQ</strong>
+        <button class="btn btn-sm btn-light position-absolute end-0 me-3" onclick="logout()">
+            <i class="bi bi-box-arrow-right"></i> Sair
+        </button>
     </header>
 
     <div class="container mt-3">
@@ -39,10 +48,6 @@
             <div class="col-auto">
                 <button class="btn btn-primary w-100" id="btnFiltrar">Filtrar</button>
             </div>
-            <!-- Botão Histórico -->
-            <!-- <div class="col-auto">
-                <button class="btn btn-primary w-100">Histórico</button>
-            </div> -->
         </div>
     </div>
 
